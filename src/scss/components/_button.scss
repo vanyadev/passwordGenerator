@@ -1,0 +1,20 @@
+.btn {
+    text-align: center;
+    outline: none;
+    font-size: 1.5rem;
+    padding: .5rem .25rem;
+    border-radius: 4px;
+    width: 100%;
+    transition: all .15s;
+    cursor: pointer;
+}
+
+.btn--green {
+    background-color: greenyellow;
+    border: 1px solid gray;
+
+    &:hover {
+        background-color: darken(greenyellow, 10%);
+        border: 1px solid darken(gray, 10%);
+    }
+}
