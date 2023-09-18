@@ -1,4 +1,4 @@
-# Porject Demo
+# Project Demo
 https://password-generator-lime-kappa.vercel.app/
 
 # Getting Started with Create React App
