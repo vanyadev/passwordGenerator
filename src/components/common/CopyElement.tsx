@@ -1,5 +1,6 @@
 import { FC } from "react";
 import toast from "react-hot-toast";
+import { BiCopy } from "react-icons/bi";
 
 interface Props {
   label?: string;
@@ -17,7 +18,7 @@ const CopyElement: FC<Props> = ({ label, textToCopy, className }) => {
   return (
     <div className={`copy ${className}`}>
       {label} <strong className="copy__text">{textToCopy}</strong>
-      <button onClick={copyToClipboard}>Copy</button>
+      <BiCopy onClick={copyToClipboard} cursor="pointer" />
     </div>
   );
 };
