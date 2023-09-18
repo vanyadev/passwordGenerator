@@ -1,4 +1,5 @@
 import { FC } from "react";
+import toast from "react-hot-toast";
 
 interface Props {
   label?: string;
@@ -7,14 +8,15 @@ interface Props {
 }
 
 const CopyElement: FC<Props> = ({ label, textToCopy, className }) => {
-  const copyToClipboard = () => {
+  const copyToClipboard = (e: React.FormEvent) => {
+    e.preventDefault();
     navigator.clipboard.writeText(textToCopy);
-    alert("Copied to clipboard!");
+    toast.success("Copied to clipboard.");
   };
 
   return (
     <div className={`copy ${className}`}>
-      {label} <strong>{textToCopy}</strong>
+      {label} <strong className="copy__text">{textToCopy}</strong>
       <button onClick={copyToClipboard}>Copy</button>
     </div>
   );

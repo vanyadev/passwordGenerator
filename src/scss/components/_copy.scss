@@ -7,7 +7,9 @@
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
+}
 
+.copy__text {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
